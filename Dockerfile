@@ -21,6 +21,4 @@ EXPOSE 7860
 # add secret at built-time
 RUN --mount=type=secret,id=TOGETHER_API_KEY,mode=0444,required=true
 
-#CMD exec uvicorn app.server:app --host 0.0.0.0 --port 8080
-
 CMD ["uvicorn", "app.server:app", "--host", "0.0.0.0", "--port", "7860"]
